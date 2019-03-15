@@ -1,0 +1,30 @@
+---
+title: 開発環境の準備
+---
+
+# パッケージ開発環境の準備
+
+```{r 01_setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE,
+                      echo = TRUE,
+                      comment = "#> ",
+                      collapse = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+library(tidyverse)
+```
+
+パッケージを作成するには、いくつか準備が必要です。
+
+## パッケージの設置･公開場所
+
+## マシンに必要なアプリケーション
+
+## 開発向けRパッケージ
+
+
+
+## 参考資料
+
+
+

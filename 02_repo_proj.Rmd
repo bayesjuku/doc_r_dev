@@ -1,0 +1,30 @@
+---
+title: repositoryとproject
+---
+
+# repositoryとproject
+
+```{r 01_setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE,
+                      echo = TRUE,
+                      comment = "#> ",
+                      collapse = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+library(tidyverse)
+```
+
+
+## repository、projectとは
+
+## repositoryの準備
+
+## projectの準備
+
+## RStudio上でのgit操作
+
+## FAQ
+
+## 参考資料
+
+
