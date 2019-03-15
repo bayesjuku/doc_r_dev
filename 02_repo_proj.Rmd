@@ -4,7 +4,7 @@ title: repositoryとproject
 
 # repositoryとproject
 
-```{r 01_setup, include=FALSE}
+```{r 02_setup, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE,
                       echo = TRUE,
                       comment = "#> ",
