@@ -1,0 +1,16 @@
+---
+title: Rパッケージ開発とコーディング規約
+author: 前田和寛(@kazutan)
+date: "2019-03-16"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+---
+
+# はじめに {-}
+
+これは広島ベイズ塾2019年春合宿にて実施した内容の資料です
+
+## 参考資料 {-}
+
+WIP...

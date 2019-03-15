@@ -1,0 +1,9 @@
+#書籍ファイル名
+book_filename: "doc_r_dev"
+#チャプターの枕詞
+#chapter_name: "lesson: "
+#出力先の指定。docsに指定しています
+output_dir: docs
+# セッションごとに切る
+#new_session: true
+
