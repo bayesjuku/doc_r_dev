@@ -1,5 +1,10 @@
 [
 ["index.html", "Rパッケージ開発とコーディング規約 はじめに 1 この資料の目的 1.1 なぜパッケージ開発が必要なの? 1.2 この資料における前提と制限 参考資料", " Rパッケージ開発とコーディング規約 前田和寛(@kazutan) 2019-03-16 はじめに これは広島ベイズ塾2019年春合宿にて実施した内容の資料です 1 この資料の目的 最も重要なキーワードは｢共有｣です。 1.1 なぜパッケージ開発が必要なの? 萬平さん｢ないのならば作るしかない｣ ho*om氏｢なければ作る、それがホクソエムの誓いだったはず!｣ なので作れるようになるのは大事。 TODO: あとで書く 1.2 この資料における前提と制限 TODO: あとで書く 参考資料 TODO: あとで書く "],
 ["01_pre_dev.html", "2 パッケージ開発環境の準備 2.1 パッケージの設置･公開場所 2.2 マシンに必要なアプリケーション 2.3 開発向けRパッケージ 2.4 参考資料", " 2 パッケージ開発環境の準備 パッケージを作成するには、いくつか準備が必要です。 2.1 パッケージの設置･公開場所 2.2 マシンに必要なアプリケーション 2.3 開発向けRパッケージ 2.4 参考資料 "],
-["02_repo_proj.html", "3 repositoryとproject 3.1 repository、projectとは 3.2 repositoryの準備 3.3 projectの準備 3.4 RStudio上でのgit操作 3.5 FAQ 3.6 参考資料", " 3 repositoryとproject 3.1 repository、projectとは 3.2 repositoryの準備 3.3 projectの準備 3.4 RStudio上でのgit操作 3.5 FAQ 3.6 参考資料 "]
+["02_repo_proj.html", "3 repositoryとproject 3.1 repository、projectとは 3.2 projectの準備 3.3 repositoryの準備 3.4 projectにrepositoryを紐付ける 3.5 RStudio上でのgit操作 3.6 FAQ 3.7 参考資料", " 3 repositoryとproject 3.1 repository、projectとは 3.2 projectの準備 3.3 repositoryの準備 3.4 projectにrepositoryを紐付ける 3.5 RStudio上でのgit操作 3.6 FAQ 3.7 参考資料 "],
+["03_write_r_code.html", "4 Rのコード記述 4.1 roxygen2の記法 4.2 関数を書く 4.3 パッケージ同封データ 4.4 ヘルプファイル作成", " 4 Rのコード記述 4.1 roxygen2の記法 4.2 関数を書く 4.3 パッケージ同封データ 4.4 ヘルプファイル作成 "],
+["04_test.html", "5 パッケージのテスト 5.1 testthatによるテスト 5.2 Buildしてからのテスト", " 5 パッケージのテスト 5.1 testthatによるテスト 5.2 Buildしてからのテスト "],
+["05_deploy.html", "6 パッケージの公開とリリース 6.1 githubへのpush 6.2 バージョンとタグ", " 6 パッケージの公開とリリース 6.1 githubへのpush 6.2 バージョンとタグ "],
+["06_pkgdown.html", "7 パッケージ用サイト作成 7.1 パッケージ用サイトの必要性 7.2 pkgdownを利用したサイト作成", " 7 パッケージ用サイト作成 7.1 パッケージ用サイトの必要性 7.2 pkgdownを利用したサイト作成 "],
+["07_coding_rule.html", "8 コーティング規約 8.1 コーティング規約の必要性 8.2 Rのコーティング規約", " 8 コーティング規約 8.1 コーティング規約の必要性 8.2 Rのコーティング規約 "]
 ]

@@ -1,10 +1,10 @@
 ---
-title: repositoryとproject
+title: Rのコード記述
 ---
 
-# repositoryとproject
+# Rのコード記述
 
-```{r 02_setup, include=FALSE}
+```{r 03_setup, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE,
                       echo = TRUE,
                       comment = "#> ",
@@ -15,18 +15,12 @@ library(tidyverse)
 ```
 
 
-## repository、projectとは
+## roxygen2の記法
 
-## projectの準備
+## 関数を書く
 
-## repositoryの準備
+## パッケージ同封データ
 
-## projectにrepositoryを紐付ける
-
-## RStudio上でのgit操作
-
-## FAQ
-
-## 参考資料
+## ヘルプファイル作成
 
 

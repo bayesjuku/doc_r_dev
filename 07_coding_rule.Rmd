@@ -1,10 +1,10 @@
 ---
-title: repositoryとproject
+title: コーティング規約
 ---
 
-# repositoryとproject
+# コーティング規約
 
-```{r 02_setup, include=FALSE}
+```{r 07_setup, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE,
                       echo = TRUE,
                       comment = "#> ",
@@ -15,18 +15,8 @@ library(tidyverse)
 ```
 
 
-## repository、projectとは
+## コーティング規約の必要性
 
-## projectの準備
-
-## repositoryの準備
-
-## projectにrepositoryを紐付ける
-
-## RStudio上でのgit操作
-
-## FAQ
-
-## 参考資料
+## Rのコーティング規約
 
 

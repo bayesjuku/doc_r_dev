@@ -1,10 +1,10 @@
 ---
-title: repositoryとproject
+title: パッケージ用サイト作成
 ---
 
-# repositoryとproject
+# パッケージ用サイト作成
 
-```{r 02_setup, include=FALSE}
+```{r 06_setup, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE,
                       echo = TRUE,
                       comment = "#> ",
@@ -15,18 +15,8 @@ library(tidyverse)
 ```
 
 
-## repository、projectとは
+## パッケージ用サイトの必要性
 
-## projectの準備
-
-## repositoryの準備
-
-## projectにrepositoryを紐付ける
-
-## RStudio上でのgit操作
-
-## FAQ
-
-## 参考資料
+## pkgdownを利用したサイト作成
 
 
