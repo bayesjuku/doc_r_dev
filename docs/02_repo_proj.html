@@ -75,7 +75,7 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="01_pre_dev.html"><a href="01_pre_dev.html"><i class="fa fa-check"></i><b>2</b> パッケージ開発環境の準備</a><ul>
 <li class="chapter" data-level="2.1" data-path="01_pre_dev.html"><a href="01_pre_dev.html#パッケージの設置公開場所"><i class="fa fa-check"></i><b>2.1</b> パッケージの設置･公開場所</a></li>
-<li class="chapter" data-level="2.2" data-path="01_pre_dev.html"><a href="01_pre_dev.html#マシンに必要なアプリケーション"><i class="fa fa-check"></i><b>2.2</b> マシンに必要なアプリケーション</a></li>
+<li class="chapter" data-level="2.2" data-path="01_pre_dev.html"><a href="01_pre_dev.html#パッケージ開発に必要なアプリケーション"><i class="fa fa-check"></i><b>2.2</b> パッケージ開発に必要なアプリケーション</a></li>
 <li class="chapter" data-level="2.3" data-path="01_pre_dev.html"><a href="01_pre_dev.html#開発向けrパッケージ"><i class="fa fa-check"></i><b>2.3</b> 開発向けRパッケージ</a></li>
 <li class="chapter" data-level="2.4" data-path="01_pre_dev.html"><a href="01_pre_dev.html#参考資料-1"><i class="fa fa-check"></i><b>2.4</b> 参考資料</a></li>
 </ul></li>
@@ -134,9 +134,26 @@
 <h1><span class="header-section-number">3</span> repositoryとproject</h1>
 <div id="repositoryprojectとは" class="section level2">
 <h2><span class="header-section-number">3.1</span> repository、projectとは</h2>
+<p>repository(リポジトリ、レポジトリ)は、雑に言うとコードや画像などのファイルを束ねているものです。</p>
+<p><a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA" class="uri">https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA</a></p>
+<p>アプリケーションに必要なものは一つにまとめてしまったほうが開発･運用･利用が便利ですよね。</p>
+<p>project(ここでは一般的な意味ではなくRStudio上のprojectとします)は、(すごく雑に言うと)R上でのrepositoryに(ほぼ)相当します。RStudioでプロジェクトを準備すると…</p>
+<ul>
+<li>実際のタスク単位でファイルをまとめていける</li>
+<li>そのプロジェクトで色々設定することができる
+<ul>
+<li>working directoryをプロジェクトで固定できる</li>
+<li>Rのoptionsをプロジェクト単位で設定できる</li>
+<li>history, buildとか管理できる</li>
+<li>他にもいろいろ便利</li>
+</ul></li>
+</ul>
+<p>なので、RStudioを使うなら基本的にprojectを作ってそこで作業しましょう。</p>
+<p>今回はパッケージ開発のお話なので、それを前提としたprojectおよびrepositoryを準備していきます。</p>
 </div>
 <div id="projectの準備" class="section level2">
 <h2><span class="header-section-number">3.2</span> projectの準備</h2>
+<p>まずは、作るパッケージ名を考えましょう。Rのパッケージ名は</p>
 </div>
 <div id="repositoryの準備" class="section level2">
 <h2><span class="header-section-number">3.3</span> repositoryの準備</h2>

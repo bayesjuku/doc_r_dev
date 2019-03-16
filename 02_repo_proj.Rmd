@@ -17,7 +17,28 @@ library(tidyverse)
 
 ## repository、projectとは
 
+repository(リポジトリ、レポジトリ)は、雑に言うとコードや画像などのファイルを束ねているものです。
+
+https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA
+
+アプリケーションに必要なものは一つにまとめてしまったほうが開発･運用･利用が便利ですよね。
+
+project(ここでは一般的な意味ではなくRStudio上のprojectとします)は、(すごく雑に言うと)R上でのrepositoryに(ほぼ)相当します。RStudioでプロジェクトを準備すると…
+
+- 実際のタスク単位でファイルをまとめていける
+- そのプロジェクトで色々設定することができる
+    - working directoryをプロジェクトで固定できる
+    - Rのoptionsをプロジェクト単位で設定できる
+    - history, buildとか管理できる
+    - 他にもいろいろ便利
+
+なので、RStudioを使うなら基本的にprojectを作ってそこで作業しましょう。
+
+今回はパッケージ開発のお話なので、それを前提としたprojectおよびrepositoryを準備していきます。
+
 ## projectの準備
+
+まずは、作るパッケージ名を考えましょう。Rのパッケージ名は
 
 ## repositoryの準備
 
