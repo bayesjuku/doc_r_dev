@@ -156,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="03_write_r_code.html"><a href="03_write_r_code.html#関数を書く"><i class="fa fa-check"></i><b>4.2</b> 関数を書く</a></li>
 <li class="chapter" data-level="4.3" data-path="03_write_r_code.html"><a href="03_write_r_code.html#パッケージ同封データ"><i class="fa fa-check"></i><b>4.3</b> パッケージ同封データ</a></li>
 <li class="chapter" data-level="4.4" data-path="03_write_r_code.html"><a href="03_write_r_code.html#ヘルプファイル作成"><i class="fa fa-check"></i><b>4.4</b> ヘルプファイル作成</a></li>
+<li class="chapter" data-level="4.5" data-path="03_write_r_code.html"><a href="03_write_r_code.html#faq-1"><i class="fa fa-check"></i><b>4.5</b> FAQ</a></li>
+<li class="chapter" data-level="4.6" data-path="03_write_r_code.html"><a href="03_write_r_code.html#参考資料-3"><i class="fa fa-check"></i><b>4.6</b> 参考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="04_test.html"><a href="04_test.html"><i class="fa fa-check"></i><b>5</b> パッケージのテスト</a><ul>
 <li class="chapter" data-level="5.1" data-path="04_test.html"><a href="04_test.html#testthatによるテスト"><i class="fa fa-check"></i><b>5.1</b> testthatによるテスト</a></li>
@@ -163,11 +165,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="05_deploy.html"><a href="05_deploy.html"><i class="fa fa-check"></i><b>6</b> パッケージの公開とリリース</a><ul>
 <li class="chapter" data-level="6.1" data-path="05_deploy.html"><a href="05_deploy.html#githubへのpush"><i class="fa fa-check"></i><b>6.1</b> githubへのpush</a></li>
-<li class="chapter" data-level="6.2" data-path="05_deploy.html"><a href="05_deploy.html#バージョンとタグ"><i class="fa fa-check"></i><b>6.2</b> バージョンとタグ</a></li>
+<li class="chapter" data-level="6.2" data-path="05_deploy.html"><a href="05_deploy.html#バージョンとリリース"><i class="fa fa-check"></i><b>6.2</b> バージョンとリリース</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="05_deploy.html"><a href="05_deploy.html#descriptionファイルを編集"><i class="fa fa-check"></i><b>6.2.1</b> <code>DESCRIPTION</code>ファイルを編集</a></li>
+<li class="chapter" data-level="6.2.2" data-path="05_deploy.html"><a href="05_deploy.html#githubでのリリース"><i class="fa fa-check"></i><b>6.2.2</b> GitHubでのリリース</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="06_pkgdown.html"><a href="06_pkgdown.html"><i class="fa fa-check"></i><b>7</b> パッケージ用サイト作成</a><ul>
 <li class="chapter" data-level="7.1" data-path="06_pkgdown.html"><a href="06_pkgdown.html#パッケージ用サイトの必要性"><i class="fa fa-check"></i><b>7.1</b> パッケージ用サイトの必要性</a></li>
 <li class="chapter" data-level="7.2" data-path="06_pkgdown.html"><a href="06_pkgdown.html#pkgdownを利用したサイト作成"><i class="fa fa-check"></i><b>7.2</b> pkgdownを利用したサイト作成</a></li>
+<li class="chapter" data-level="7.3" data-path="06_pkgdown.html"><a href="06_pkgdown.html#サイトをgithubにデプロイ"><i class="fa fa-check"></i><b>7.3</b> サイトをGitHubにデプロイ</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="07_coding_rule.html"><a href="07_coding_rule.html"><i class="fa fa-check"></i><b>8</b> コーティング規約</a><ul>
 <li class="chapter" data-level="8.1" data-path="07_coding_rule.html"><a href="07_coding_rule.html#コーティング規約の必要性"><i class="fa fa-check"></i><b>8.1</b> コーティング規約の必要性</a></li>
@@ -197,15 +203,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">4</span> Rのコード記述</h1>
 <div id="roxygen2の記法" class="section level2">
 <h2><span class="header-section-number">4.1</span> roxygen2の記法</h2>
+<p>Rファイル内にドキュメント要素を記述する方法があり、roxygen2を利用すると簡単にできます。RStudioには標準で対応しているので、スムーズに入力できます。</p>
+<p>roxygen2の記法については、Rパッケージ開発のチートシートを参照する、もしくはGitHub上にある有名なRパッケージのコードを見るといいでしょう。</p>
 </div>
 <div id="関数を書く" class="section level2">
 <h2><span class="header-section-number">4.2</span> 関数を書く</h2>
+<p><code>R</code>ディレクトリ内に<code>*.R</code>ファイルを準備して関数などを作成してください。例えばこんな感じです:</p>
+<p><img src="imgs/capt_create_r_file.png" /></p>
+<p><code>@export</code>は｢この関数はパッケージを読み込めば使えるようにしろ｣という指示なので、忘れないようにしてください</p>
 </div>
 <div id="パッケージ同封データ" class="section level2">
 <h2><span class="header-section-number">4.3</span> パッケージ同封データ</h2>
 </div>
 <div id="ヘルプファイル作成" class="section level2">
 <h2><span class="header-section-number">4.4</span> ヘルプファイル作成</h2>
+<p><code>*.R</code>ファイル内にroxygen2記法で書き込んでいれば、ヘルプファイルを簡単に作成することが可能です。以下の1行を実行してください:</p>
+<pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">document</span>()</code></pre>
+<p>これでOKです。</p>
+</div>
+<div id="faq-1" class="section level2">
+<h2><span class="header-section-number">4.5</span> FAQ</h2>
+<p>あとで。</p>
+</div>
+<div id="参考資料-3" class="section level2">
+<h2><span class="header-section-number">4.6</span> 参考資料</h2>
+<p>あとで。</p>
 
 </div>
 </div>

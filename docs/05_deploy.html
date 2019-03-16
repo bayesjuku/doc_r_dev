@@ -156,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="03_write_r_code.html"><a href="03_write_r_code.html#関数を書く"><i class="fa fa-check"></i><b>4.2</b> 関数を書く</a></li>
 <li class="chapter" data-level="4.3" data-path="03_write_r_code.html"><a href="03_write_r_code.html#パッケージ同封データ"><i class="fa fa-check"></i><b>4.3</b> パッケージ同封データ</a></li>
 <li class="chapter" data-level="4.4" data-path="03_write_r_code.html"><a href="03_write_r_code.html#ヘルプファイル作成"><i class="fa fa-check"></i><b>4.4</b> ヘルプファイル作成</a></li>
+<li class="chapter" data-level="4.5" data-path="03_write_r_code.html"><a href="03_write_r_code.html#faq-1"><i class="fa fa-check"></i><b>4.5</b> FAQ</a></li>
+<li class="chapter" data-level="4.6" data-path="03_write_r_code.html"><a href="03_write_r_code.html#参考資料-3"><i class="fa fa-check"></i><b>4.6</b> 参考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="04_test.html"><a href="04_test.html"><i class="fa fa-check"></i><b>5</b> パッケージのテスト</a><ul>
 <li class="chapter" data-level="5.1" data-path="04_test.html"><a href="04_test.html#testthatによるテスト"><i class="fa fa-check"></i><b>5.1</b> testthatによるテスト</a></li>
@@ -163,11 +165,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="05_deploy.html"><a href="05_deploy.html"><i class="fa fa-check"></i><b>6</b> パッケージの公開とリリース</a><ul>
 <li class="chapter" data-level="6.1" data-path="05_deploy.html"><a href="05_deploy.html#githubへのpush"><i class="fa fa-check"></i><b>6.1</b> githubへのpush</a></li>
-<li class="chapter" data-level="6.2" data-path="05_deploy.html"><a href="05_deploy.html#バージョンとタグ"><i class="fa fa-check"></i><b>6.2</b> バージョンとタグ</a></li>
+<li class="chapter" data-level="6.2" data-path="05_deploy.html"><a href="05_deploy.html#バージョンとリリース"><i class="fa fa-check"></i><b>6.2</b> バージョンとリリース</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="05_deploy.html"><a href="05_deploy.html#descriptionファイルを編集"><i class="fa fa-check"></i><b>6.2.1</b> <code>DESCRIPTION</code>ファイルを編集</a></li>
+<li class="chapter" data-level="6.2.2" data-path="05_deploy.html"><a href="05_deploy.html#githubでのリリース"><i class="fa fa-check"></i><b>6.2.2</b> GitHubでのリリース</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="06_pkgdown.html"><a href="06_pkgdown.html"><i class="fa fa-check"></i><b>7</b> パッケージ用サイト作成</a><ul>
 <li class="chapter" data-level="7.1" data-path="06_pkgdown.html"><a href="06_pkgdown.html#パッケージ用サイトの必要性"><i class="fa fa-check"></i><b>7.1</b> パッケージ用サイトの必要性</a></li>
 <li class="chapter" data-level="7.2" data-path="06_pkgdown.html"><a href="06_pkgdown.html#pkgdownを利用したサイト作成"><i class="fa fa-check"></i><b>7.2</b> pkgdownを利用したサイト作成</a></li>
+<li class="chapter" data-level="7.3" data-path="06_pkgdown.html"><a href="06_pkgdown.html#サイトをgithubにデプロイ"><i class="fa fa-check"></i><b>7.3</b> サイトをGitHubにデプロイ</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="07_coding_rule.html"><a href="07_coding_rule.html"><i class="fa fa-check"></i><b>8</b> コーティング規約</a><ul>
 <li class="chapter" data-level="8.1" data-path="07_coding_rule.html"><a href="07_coding_rule.html#コーティング規約の必要性"><i class="fa fa-check"></i><b>8.1</b> コーティング規約の必要性</a></li>
@@ -197,10 +203,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">6</span> パッケージの公開とリリース</h1>
 <div id="githubへのpush" class="section level2">
 <h2><span class="header-section-number">6.1</span> githubへのpush</h2>
+<p>パッケージを作成したら、githubへpushしましょう。基本、これでOKです。</p>
 </div>
-<div id="バージョンとタグ" class="section level2">
-<h2><span class="header-section-number">6.2</span> バージョンとタグ</h2>
+<div id="バージョンとリリース" class="section level2">
+<h2><span class="header-section-number">6.2</span> バージョンとリリース</h2>
+<div id="descriptionファイルを編集" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> <code>DESCRIPTION</code>ファイルを編集</h3>
+<p>パッケージ情報を作成しましょう。これは<code>DESCRIPTION</code>ファイルを変更していきます:</p>
+<p><img src="imgs/capt_description.png" /></p>
+<p>なお、パッケージ依存がある場合はこのファイルに書いていく必要があるのですが、これも以下の関数で自動的に入れることができます:</p>
+<pre class="sourceCode r"><code class="sourceCode r">usethis<span class="op">::</span><span class="kw">use_package</span>(<span class="st">&quot;name_of_package&quot;</span>, <span class="dt">type =</span> <span class="st">&quot;Imports&quot;</span>)</code></pre>
+<p>これでOKです</p>
+<p><img src="imgs/capt_add_imports.png" /></p>
+<p>次にバージョンですが、これも<code>DESCRIPTION</code>ファイルに記入してください。</p>
+<p>必要事項を記入したら、githubへpushしてください。</p>
+</div>
+<div id="githubでのリリース" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> GitHubでのリリース</h3>
+<p>GitHubでリリースします。GitHubの該当リポジトリへアクセスし、releaceタブをクリックしてください:</p>
+<p><img src="imgs/capt_release.png" /></p>
+<p>バージョン名をよく確認し、リリースをすれば完了です。</p>
 
+</div>
 </div>
 </div>
             </section>

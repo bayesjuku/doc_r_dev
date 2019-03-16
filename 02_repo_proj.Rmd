@@ -54,6 +54,15 @@ usethis::create_package("path_to_project")
 
 ![](imgs/capt_create_package_output.png)
 
+オープンソースの世界(に限らないのですが)では、｢そのアプリケーションがどんなライセンスであるか｣は非常に重要です。ライセンスに関する説明は省略しますが、後で必ず自分で調べておいてください。
+
+よく利用されているMITライセンスとしたいのであれば、パッケージのprojectで以下の1行を走らせればOKです:
+
+```{r}
+usethis::use_mit_license()
+```
+
+
 次に、このプロジェクトにgitをあてるように準備します。メニューの[Tools] - [Project Option...]へ進み、gitを有効化(初期化)します:
 
 ![](imgs/capt_git_init.png)
@@ -100,13 +109,18 @@ usethis::create_package("path_to_project")
 
 なお、gitはエラーメッセージやマニュアルが丁寧なので、まずはエラーメッセージやドキュメントを読む習慣をつけましょう。
 
+これでGitHub上のrepositoryにファイルが追加されます:
+
+![](imgs/capt_github_afterpush.png)
+
 ## RStudio上でのgit操作
 
 (時間があれば説明します)
 
 ## FAQ
 
-(あとで書く)
+- gitで設定するのがすごく面倒です。どうにかなりませんか?
+    - ごめん、さっき`usethis::create_from_github()`を知りました。たぶんこれが一番簡単。詳しくはこの関数のヘルプを見てください
 
 ## 参考資料
 

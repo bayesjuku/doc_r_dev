@@ -17,6 +17,35 @@ library(tidyverse)
 
 ## githubへのpush
 
-## バージョンとタグ
+パッケージを作成したら、githubへpushしましょう。基本、これでOKです。
+
+## バージョンとリリース
+
+### `DESCRIPTION`ファイルを編集
+
+パッケージ情報を作成しましょう。これは`DESCRIPTION`ファイルを変更していきます:
+
+![](imgs/capt_description.png)
+
+なお、パッケージ依存がある場合はこのファイルに書いていく必要があるのですが、これも以下の関数で自動的に入れることができます:
+
+```{r}
+usethis::use_package("name_of_package", type = "Imports")
+```
+
+これでOKです
+
+![](imgs/capt_add_imports.png)
+
+次にバージョンですが、これも`DESCRIPTION`ファイルに記入してください。
+
+必要事項を記入したら、githubへpushしてください。
 
 
+### GitHubでのリリース
+
+GitHubでリリースします。GitHubの該当リポジトリへアクセスし、releaceタブをクリックしてください:
+
+![](imgs/capt_release.png)
+
+バージョン名をよく確認し、リリースをすれば完了です。

@@ -17,6 +17,20 @@ library(tidyverse)
 
 ## testthatによるテスト
 
+testthatでググってください。
+
 ## Buildしてからのテスト
 
+パッケージをbuildするには、RStudioの[Build]タブを選択して[Install and Restart]ボタンをクリックしてください:
 
+![](imgs/capt_build.png)
+
+自動的に(一時的に)そのパッケージが読み込まれるので、実際に関数を実行してテストしてみてください:
+
+![](imgs/capt_real_test.png)
+
+ひとつ前の章で、`devtools::documents()`を実行してヘルプファイルを生成しているのなら、この段階でヘルプが見れます:
+
+![](imgs/capt_help.png)
+
+なお、これでパッケージビルドした内容はRを閉じると消えます。
